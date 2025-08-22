@@ -17,14 +17,14 @@ const Navbar: React.FC = () => {
       <div className="flex-1">
         <Link
           href="/"
-          className="text-2xl font-bold tracking-wide text-green-600 hover:text-green-700 transition-colors flex items-center gap-2"
+          className="text-2xl font-bold tracking-wide text-green-800 transition-colors flex items-center gap-2"
         >
           <Image
             src="/logo.png"
             alt="Greenora Logo"
             height={40}
             width={40}
-            className="rounded-md"
+            className="scale-150"
             priority
           />
           Greenora
@@ -35,14 +35,14 @@ const Navbar: React.FC = () => {
       <div className="hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-base font-medium gap-4">
           <li>
-            <Link href="/" className="hover:text-green-600 transition-colors">
+            <Link href="/" className="hover:text-green-800 transition-colors">
               Home
             </Link>
           </li>
           <li>
             <Link
               href="/products"
-              className="hover:text-green-600 transition-colors"
+              className="hover:text-green-800 transition-colors"
             >
               Products
             </Link>
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/dashboard/add-product"
-                className="hover:text-green-600 transition-colors"
+                className="hover:text-green-800 transition-colors"
               >
                 Add Product
               </Link>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
         {!session ? (
           <button
             onClick={() => signIn(undefined, { callbackUrl: "/" })}
-            className="btn btn-sm rounded-full bg-green-600 text-white hover:bg-green-700 px-4"
+            className="btn btn-sm rounded-full bg-green-600 text-white hover:bg-green-800 px-4"
           >
             Login
           </button>
