@@ -1,25 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
+
+export const metadata: Metadata = {
+  title: "Greenora",
+  description: "Sustainable Products Directory",
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" data-theme="light" style={{ scrollBehavior: "smooth" }}>
+    <html lang="en">
       <body>
-        <header>
-
-        </header>
-
-        <main>
-          {children}
-        </main>
-
-        <footer>
-
-        </footer>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
