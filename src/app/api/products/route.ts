@@ -14,7 +14,7 @@ interface Product {
 export async function GET() {
   try {
     const client = await clientPromise;
-    const db = client.db("liteMart");
+    const db = client.db("GreenoraDB");
 
     const products: Product[] = await db
       .collection<Product>("products")
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
   try {
     const body: Omit<Product, "_id"> = await req.json(); // exclude _id for insertion
     const client = await clientPromise;
-    const db = client.db("liteMart");
+    const db = client.db("GreenoraDB");
 
     const result = await db.collection<Product>("products").insertOne(body);
 

@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
           {session && (
             <li>
               <Link
-                href="/dashboard/add-product"
+                href="/dashboard/add-products"
                 className="hover:text-green-800 transition-colors"
               >
                 Add Product
