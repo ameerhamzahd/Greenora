@@ -34,5 +34,5 @@ if (process.env.NODE_ENV === "development") {
     return client;
   });
 }
-
+ 
 export default clientPromise;
